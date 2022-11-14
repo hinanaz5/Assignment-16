@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 16</title>
+</head>
+<body>
+    
+
+
+<script>
+
+// Exercise 1:
+// Write a JavaScript program to extract the first half of a given array and show the output in new
+// variable &quot;categories_firsthalf&quot;
+// let categories = [&quot;Health&quot;, &quot;Fashion&quot;, &quot;Toys&quot;, &quot;Electronic&quot;, &quot;TV&quot;, &quot;Sports&quot;, &quot;Watches&quot;, &quot;Motorbike&quot;,
+// &quot;Home and Lifestyle&quot;, &quot;Devices&quot;]
+
+
+let categories = ["Health", "Fashion", "Toys","Electronic","TV","Sports", "Watches", "Motorbike", "Home and Lifestyle", "Devices"]
+console.log(categories.length )
+
+let categories_firsthalf = categories.slice(0,5);
+console.log(categories_firsthalf);
+
+
+
+// Exercise 2:
+// Write a JavaScript program to concatenate two array except their first index.
+// const str1 = [&quot;Apple&quot;, &quot;Bananna&quot;, &quot;Orange&quot;, &quot;Grapes&quot;]
+// const str2 = [&quot;abc&quot; , &quot;def&quot;, &quot;ghi&quot;, &quot;jkl&quot;]
+
+
+const str1 = ["Apple", "Bananna", "Orange", "Grapes"]
+const str2 = ["abc" , "def", "ghi", "jkl"]
+
+const str3 = str1.slice(1,4).concat(str2.slice(1,4));
+
+console.log(str3);
+ 
+
+
+// Exercise 3:
+// Write a JavaScript program to sort the given array in ascending and descending order.
+// const NumericArray = [&#39;80&#39;, &#39;9&#39;, &#39;700&#39;, 40, 1, 5, 200];
+
+const NumericArray = ["80", "9", "700", 40, 1, 5, 200];
+
+NumericArray.sort(function(a, b){return a - b}); 
+
+console.log( NumericArray);
+
+NumericArray.reverse(); // method 1 for decending
+
+console.log(NumericArray);
+
+NumericArray.sort(function(a, b){return b-a}); // method 2 for decending
+console.log(NumericArray);
+
+
+// Write a JavaScript program to add &quot;Feb&quot; at the index 1.
+// const months = [&quot;Jan&quot;, &quot;March&quot;, &quot;April&quot;, &quot;Dec&quot;];
+// Now remove &quot;Dec&quot; from the array and add &quot;May&quot;, &quot;June&quot; in the replacement of &quot;Dec&quot;
+
+const months = ["Jan", "March", "April", "Dec"];
+
+months.splice(1,0,"Feb"), months.splice(months.length-1, 1 , "May", "June")
+
+console.log(months);
+
+
+
+
+// Exercise 5:
+// Write a JavaScript program to join given array with &quot; and &quot;
+// let joinarr = [&quot;Me&quot;, &quot;my family&quot;]
+
+let joinarr = ["Me" , "my family"];
+
+let joinarrNew = joinarr.join(" and ");
+
+console.log(joinarrNew);
+
+
+
+// Exercise 6:
+// Write JS Condition for the following conditions:
+// 1. number greater than 2 and less than 10 then result should be &quot;Number is between 2 and 10&quot;
+// 2. number greater than 10 and less than 19 then reult should be &quot;Number is between 10 and 19&quot;
+// 3. number greater than 19 and less than 30 then reult should be &quot;Number is between 19 and 29&quot;
+// 4. If selection is not in these values then result should be &quot;Sorry try again&quot;
+
+let number = 41;
+
+if (number >2 && number <10) {
+    console.log("Number is between 2 and 10");
+} else if (number >10 && number <19) {
+    console.log("Number is between 10 and 19");
+} else if (number >19 && number <30) {
+    console.log("Number is between 19 and 29");
+}else {
+    console.log("Sorry try again")
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>
